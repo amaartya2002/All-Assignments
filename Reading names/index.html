@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reading names</title>
+</head>
+<body>
+
+  <button onclick="getNames()">Get names of people</button>
+
+  <ul class="names">
+
+  </ul>
+
+  <script>
+
+
+      /*
+    function getNames(){
+
+      const res = fetch('https://fakerapi.it/api/v1/persons')
+      res.then((res) => {
+        const response = res.json();
+        return response
+      })
+      .then((data) => console.log(data))
+
+    }
+      */
+
+      const unorderedList = document.querySelector('.names')
+      unorderedList.innerHTML = ""
+
+
+      async function getNames() {
+
+        const response = await fetch('https://fakerapi.it/api/v1/persons')
+        const data = await response.json()
+        
+        data.data.forEach((person) => {
+          const ele = document.createElement('li')
+          ele.textContent = person["firstname"] + " " + person["lastname"]
+          unorderedList.appendChild(ele)
+        } )
+        
+      }
+
+
+  </script>
+
+
+
+
+  
+  
+</body>
+</html>

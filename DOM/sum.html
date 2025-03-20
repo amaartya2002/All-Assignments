@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+</head>
+<body>
+
+  <script>
+
+    function calculateSum(){
+
+      //return alert('Hi')
+
+      const divEle = document.getElementById("sumValue")
+      //console.log(divEle);
+
+      const firstNum = document.getElementById("firstNumber").value 
+      const secondNum = document.getElementById("secondNumber").value 
+
+      divEle.innerText = "sum is " + (parseInt(firstNum) + parseInt(secondNum) )
+      
+
+    }
+
+  </script>
+
+  <label for="number">First Number : </label>
+  <input type="number" id="firstNumber"><br>
+  <label for="number">Second Number : </label>
+  <input type="number" id="secondNumber"><br>
+
+  <button type="submit" onclick="calculateSum()">Calculate</button>
+
+  <div id="sumValue"></div>
+  
+</body>
+</html>

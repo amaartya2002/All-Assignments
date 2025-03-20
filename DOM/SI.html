@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Interest</title>
+</head>
+<body>
+
+  <script>
+
+     /*
+
+    function caluclateSI(){
+
+      const principle = document.getElementById("principle").value
+      const rate = document.getElementById("rate").value
+      const duration = document.getElementById("time").value
+
+      const SI = document.getElementById("SI")
+
+      const simpleInterest = (principle*rate*duration) / 100 
+      
+      SI.innerText = `Simple intreset calculated is ${simpleInterest}`
+
+
+    }
+
+    */
+
+
+
+    // Another way dynamically fetching data
+
+    function mySi(){
+
+      const principle = document.getElementById("principle").value
+      const rate = document.getElementById("rate").value
+      const duration = document.getElementById("time").value
+
+      fetch("")
+
+
+    }
+
+  </script>
+
+  <label for="principle">Principle</label>
+  <input type="number" id="principle"><br>
+  <label for="rate">Rate</label>
+  <input type="number" id="rate"><br>
+  <label for="time">Duration</label>
+  <input type="number" id="time"><br>
+  <button type="submit" onclick="caluclateSI()">Calculate SI</button>
+
+  <div id="SI"></div>
+  
+</body>
+</html>

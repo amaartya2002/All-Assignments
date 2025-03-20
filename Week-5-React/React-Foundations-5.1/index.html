@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Button Component</title>
+</head>
+<body>
+
+  <div id="button-parent">
+
+  </div>
+
+  <script>
+
+    let counterState = {
+      count : 0 ,
+    }
+
+    function onButtonPress(){
+
+      counterState.count++;
+      reRenderButtonComponent();
+    }
+
+
+
+    function reRenderButtonComponent(){
+
+      const btn = document.getElementById('button-parent')
+      btn.innerHTML = ''
+      const component = buttonComponent(counterState.count);
+      console.log(component);
+      btn.appendChild(component);
+
+    }
+
+
+
+    function buttonComponent(count){
+
+      const button = document.createElement('button')
+
+      button.innerHTML = `Counter ${count}`
+
+      button.setAttribute('onClick' , `onButtonPress()`)
+
+      return button;
+
+    }
+
+    reRenderButtonComponent();
+
+    
+
+  </script>
+  
+  
+</body>
+</html>
